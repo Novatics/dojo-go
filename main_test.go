@@ -36,10 +36,10 @@ func TestNumeroDeNotasRetornaInteiro(t *testing.T) {
 
 func TestSaque(t *testing.T) {
     
-    got := calculaSaque(180)
-    wantobreakfree := register{nota100 : 1,nota50 : 1, nota20:1, nota10:1 } 
+  got := calculaSaque(180)
+  wantobreakfree := register{nota100 : 1,nota50 : 1, nota20:1, nota10:1 } 
 
-    if  got.nota100 != wantobreakfree.nota100 {
-		t.Errorf("got %d, wanted %d", got, wantobreakfree)
+  if  got != wantobreakfree {
+		t.Errorf("got %+v, wanted %+v", got, wantobreakfree)
 	}
 }
