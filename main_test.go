@@ -16,11 +16,11 @@ import (
 
 func TestCalculaRestoRetorna5(t *testing.T) {
     
-    got := calculaResto(25,20)
+    got := calculaResto(20,25)
     wantobreakfree := 5
 
     if got != wantobreakfree {
-		t.Errorf("got %q, wanted %q", got, wantobreakfree)
+		t.Errorf("got %d, wanted %d", got, wantobreakfree)
 	}
 }
 
@@ -42,4 +42,10 @@ func TestSaque(t *testing.T) {
   if  got != wantobreakfree {
 		t.Errorf("got %+v, wanted %+v", got, wantobreakfree)
 	}
+}
+
+func TestValorNaoNegativo(t *testing.T) {
+  
+  got := insereValor()
+  wantobreakfree := - got
 }

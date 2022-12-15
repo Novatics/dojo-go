@@ -24,7 +24,7 @@ func main() {
 
 func calculaResto(nota int, valor int) int {
 
-    result := nota % valor
+    result := valor % nota
 
     return result
 }
