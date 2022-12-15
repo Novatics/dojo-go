@@ -22,11 +22,25 @@ func main() {
 
 }
 
+func calculaResto(nota int, valor int) int {
+
+    result := nota % valor
+
+    return result
+}
+
+func numeroDeNotas(nota int, valor int) int {
+    return valor / nota
+}
+
 func calculaSaque(valor int) register {
 	s := register{nota100: 0, nota50: 0, nota20: 0, nota10: 0}
 	// resto := 0
 
-	s.nota100 = valor / 100
+	s.nota100 = calculaNotas(100, valor) 
+	s.nota50 = calculaNotas(50, valor) 
+	s.nota20 = calculaNotas(20, valor) 
+	s.nota10 = calculaNotas(10, valor) 
 
 	fmt.Print("AAAAAAAAAAA")
 	fmt.Print(s.nota100)
