@@ -4,9 +4,9 @@ import "fmt"
 
 type register struct {
 	nota100 int
-	nota50 int
-	nota20 int
-	nota10 int
+	nota50  int
+	nota20  int
+	nota10  int
 }
 
 func main() {
@@ -16,21 +16,20 @@ func main() {
 
 	// Taking input from user
 	fmt.Scanln(&saqueValor)
-	// s := register{nota100: 100, nota50: 100, nota20: 100, nota10: 100}
 
-	calculaSaque(100)
+	calculaSaque(220)
 	fmt.Print(saqueValor)
 
 }
 
-func calculaSaque(valor int) int {
-	// nota100 := valor / 100
+func calculaSaque(valor int) register {
+	s := register{nota100: 0, nota50: 0, nota20: 0, nota10: 0}
+	// resto := 0
 
+	s.nota100 = valor / 100
 
-	// nota50 := valor / 50
+	fmt.Print("AAAAAAAAAAA")
+	fmt.Print(s.nota100)
 
-	// nota20 := valor / 20
-
-	// nota10 := valor /10
-	return valor
+	return s
 }
