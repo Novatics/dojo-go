@@ -15,37 +15,38 @@ import (
 */
 
 func TestCalculaRestoRetorna5(t *testing.T) {
-    
-    got := calculaResto(20,25)
-    wantobreakfree := 5
 
-    if got != wantobreakfree {
+	got := calculaResto(20, 25)
+	wantobreakfree := 5
+
+	if got != wantobreakfree {
 		t.Errorf("got %d, wanted %d", got, wantobreakfree)
 	}
 }
 
 func TestNumeroDeNotasRetornaInteiro(t *testing.T) {
-    
-    got := numeroDeNotas(10, 99)
-    wantobreakfree := 9
 
-    if got != wantobreakfree {
+	got := numeroDeNotas(10, 99)
+	wantobreakfree := 9
+
+	if got != wantobreakfree {
 		t.Errorf("got %d, wanted %d", got, wantobreakfree)
 	}
 }
 
 func TestSaque(t *testing.T) {
-    
-  got := calculaSaque(180)
-  wantobreakfree := register{nota100 : 1,nota50 : 1, nota20:1, nota10:1 } 
 
-  if  got != wantobreakfree {
+	got := calculaSaque(180)
+	wantobreakfree := register{nota100: 1, nota50: 1, nota20: 1, nota10: 1}
+
+	if got != wantobreakfree {
 		t.Errorf("got %+v, wanted %+v", got, wantobreakfree)
 	}
 }
 
 func TestValorNaoNegativo(t *testing.T) {
-  
-  got := insereValor()
-  wantobreakfree := - got
+
+	got := validaValor(12)
+	wantobreakfree := true
+
 }
