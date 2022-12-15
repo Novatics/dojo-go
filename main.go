@@ -40,6 +40,14 @@ func validaValor(valor int) bool {
 	return false
 }
 
+func validaValorPodeSerSacado(valor int) bool {
+	if valor % 10 != 0 {
+		return false
+	}
+
+	return true
+}
+
 func calculaSaque(valor int) register {
 	s := register{nota100: 0, nota50: 0, nota20: 0, nota10: 0}
 	// resto := 0

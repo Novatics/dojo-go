@@ -44,9 +44,21 @@ func TestSaque(t *testing.T) {
 	}
 }
 
+func TestValorNegativo(t *testing.T) {
+
+	fail := validaValor(-1)
+
+	if fail == true {
+		t.Errorf("faiou %t", fail)
+	}
+
+}
+
 func TestValorNaoNegativo(t *testing.T) {
 
-	got := validaValor(12)
-	wantobreakfree := true
+	success := validaValor(1)
+	if success == false {
+		t.Errorf("faiou %t", success)
+	}
 
 }
